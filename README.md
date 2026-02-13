@@ -10,7 +10,7 @@ The developed solution for model-based partial M2M transformations is composed o
 * Custom Transformation Libraries component, which stores custom M2M transformation specifications (models) for specific modeling languages, e.g. UML, BPMN, SBVR, UML-BPMN, BPMN-SBVR, UML-SBVR.
 * VEPSEM model integration plug-in for MagicDraw UML (optional), which provides model integration capability. VEPSEM Model Transformation Plugin is another tool, developed by VEPSEM research group in the Information Systems Department, Kaunas University of Technology. Current version is available at http://isd.ktu.lt/failai/vepsem/vepsem_plugin.zip.
 
-The D&D M2M Transformations plug-in is developed using M2M Transformations Core API, which implements all the necessary abstract M2M transformation processing and could be used to develop other similar M2M transformation solutions for other compatible CASE tools. Such development solution enables its reuse and integration of the developed transformation engine, while at the same time providing flexibility and extendability essential for custom implementations.
+The D&D M2M Transformations plug-in is developed using [M2M Transformations Core API](https://github.com/paudan/dnd-transformation-core), which implements all the necessary abstract M2M transformation processing and could be used to develop other similar M2M transformation solutions for other compatible CASE tools. Such development solution enables its reuse and integration of the developed transformation engine, while at the same time providing flexibility and extendability essential for custom implementations.
 
 Two relevant UML profiles are created and distributed with the D&D M2M Transformations plugin:
 
@@ -22,7 +22,7 @@ One of the core features of this approach is custom transformation libraries, de
 Two additional native MagicDraw profiles (from `MagicDraw Model Profiles` package) are required to run this solution:
 
 * DSL Customization profile (distributed together with MagicDraw UML), which is used by the transformation engine and provides a set of necessary stereotypes.
-* UML Metamodel with attributes (can be installed as a resource using MagicDraw Resource/Plugin Manager), which is used to represent UML metaclasses together with their properties. This is mandatory for the development of transformation patterns.
+* UML Metamodel with attributes (can be installed as a resource using `MagicDraw Resource/Plugin Manager`), which is used to represent UML metaclasses together with their properties. This is mandatory for the development of transformation patterns.
 
 The current version of the plugin can be downloaded  from [here](https://www.dropbox.com/s/707c8wukki4yclv/dnd_plugin_no_SBVR.zip?dl=0) (this version does not include SBVR profile and sample libraries for transformations of from/to SBVR elements) and from [here](https://www.dropbox.com/s/qoj0a6ecyjj9jlz/dnd_plugin_SBVR.zip?dl=0) (including SBVR transformation libraries and customizations). Note, that these are still alpha versions, and functionality is still under development, thus it is not expected to work in every situation. The solution has curently been tested with UML (Use Case, Class, State Machine models), BPMN process model, SoaML models and SBVR Fact model.
 

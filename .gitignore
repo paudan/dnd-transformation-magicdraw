@@ -26,3 +26,4 @@ build/
 doc/
 doc-rtf/
 target/
+!dist/*.jar
