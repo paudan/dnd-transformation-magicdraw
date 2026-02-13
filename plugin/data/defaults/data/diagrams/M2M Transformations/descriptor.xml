@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<diagram abbreviation="M2M_T" baseType="Class Diagram" type="M2M Transformations" version="7">
+    <toolbarConfiguration>
+        <baseCategory expandedByDefault="false" id="COMMON_ELEMENTS_STATIC" parentCategoryID="COMMON_ELEMENTS_STATIC"/>
+        <category expandedByDefault="true" id="action_category_1427923294546_551616_575" name="M2M Transformations">
+            <actions>
+                <group>
+                    <custom description="M2M Transformation Pattern" id="IDaction_1427924397448_504860_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                        <stereotype id="_18_0_2_8f90291_1427923244257_518378_6733"/>
+                        <defaults>
+                            <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                                <mdElement elementClass="PropertyManager">
+                                    <propertyManagerID>_18_0_2_8f90291_1427924433938_3916_4204</propertyManagerID>
+                                </mdElement>
+                            </PropertyVisitorAcceptor>
+                        </defaults>
+                    </custom>
+                    <custom description="M2M Transformation Specification" id="IDaction_1432818865209_227257_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                        <stereotype id="_18_0_2_8f90291_1427923244257_518378_6733"/>
+                        <defaults>
+                            <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                                <mdElement elementClass="PropertyManager">
+                                    <propertyManagerID>_18_0_2_56101ea_1432818992370_138923_18996</propertyManagerID>
+                                </mdElement>
+                            </PropertyVisitorAcceptor>
+                        </defaults>
+                    </custom>
+                </group>
+                <custom description="D&amp;D Connector" id="IDaction_1427923410101_703935_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.compositestructures.mdinternalstructures.Connector">
+                    <stereotype id="_18_0_2_8f90291_1427923244247_729843_6718"/>
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_0_2_56101ea_1432730887470_462373_19287</propertyManagerID>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+                <custom description="Source" id="IDaction_1430251357686_633426_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_0_3_8f90291_1430251419152_435161_4445</propertyManagerID>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+                <custom description="Target" id="IDaction_1430251390453_859553_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_0_3_8f90291_1430251419153_183478_4446</propertyManagerID>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+                <custom description="Element Join" id="IDaction_1432741672278_257504_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property">
+                    <stereotype id="_18_0_2_8f90291_1427923244280_691875_6744"/>
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_0_2_56101ea_1432741724787_879340_16243</propertyManagerID>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+                <custom description="Dragged Element" id="IDaction_1441966592152_254431_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Comment">
+                    <stereotype id="_18_2_56101ea_1441713830127_910422_4668"/>
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_1_56101ea_1441981853192_272322_22664</propertyManagerID>
+                                <mdElement elementClass="StringProperty">
+                                    <propertyID>documentation</propertyID>
+                                    <propertyDescriptionID>documentation_DESCRIPTION</propertyDescriptionID>
+                                    <value>Defines the dragged element in the source part of the transformation pattern. Drag this element onto the element which must be set as dragged</value>
+                                    <multiline xmi:value="true"/>
+                                </mdElement>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+                <group>
+                    <custom description="Extended Drag&amp;Drop Specification" id="IDaction_1432642599394_558701_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                        <stereotype id="_18_0_2_56101ea_1432567565264_992403_4230"/>
+                        <defaults>
+                            <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                                <mdElement elementClass="PropertyManager">
+                                    <propertyManagerID>_18_0_2_56101ea_1432730887471_887459_19288</propertyManagerID>
+                                </mdElement>
+                            </PropertyVisitorAcceptor>
+                        </defaults>
+                    </custom>
+                    <custom description="Drag&amp;Drop Specification" id="IDaction_1427923372070_752473_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                        <stereotype id="_17_0_2_903028d_1341238576589_798230_2132"/>
+                        <defaults>
+                            <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                                <mdElement elementClass="PropertyManager">
+                                    <propertyManagerID>_18_0_2_56101ea_1432642637909_54172_18896</propertyManagerID>
+                                </mdElement>
+                            </PropertyVisitorAcceptor>
+                        </defaults>
+                    </custom>
+                </group>
+                <custom description="Customization" id="IDaction_1432642513802_792911_0" listAsElement="false" opposite="false" type="com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class">
+                    <stereotype id="_11_5EAPbeta_be00301_1148632817486_155219_3"/>
+                    <defaults>
+                        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+                            <mdElement elementClass="PropertyManager">
+                                <propertyManagerID>_18_0_2_56101ea_1432642637910_513324_18898</propertyManagerID>
+                            </mdElement>
+                        </PropertyVisitorAcceptor>
+                    </defaults>
+                </custom>
+            </actions>
+        </category>
+    </toolbarConfiguration>
+    <module location="C:\Program Files\MagicDraw\profiles\M2M transformations.mdxml" name="M2M transformations.mdxml">
+        <root id="_18_0_2_8f90291_1428311331624_580517_4002"/>
+        <root id="f6ab47f5-2cdd-4bea-8845-1f9ba984f52a"/>
+    </module>
+    <module location="C:\Program Files\MagicDraw\profiles\UML_Standard_Profile.mdzip" name="UML_Standard_Profile.mdzip">
+        <root id="magicdraw_uml_standard_profile_v_0001"/>
+    </module>
+    <elementstyle name="Connector">
+        <PropertyVisitorAcceptor xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+            <mdElement elementClass="PropertyManager">
+                <propertyManagerID>_18_1_56101ea_1441981853189_510749_22663</propertyManagerID>
+                <mdElement elementClass="ChoiceProperty">
+                    <propertyID>STEREOTYPES_DISPLAY_MODE</propertyID>
+                    <propertyDescriptionID>STEREOTYPES_DISPLAY_MODE_DESCRIPTION</propertyDescriptionID>
+                    <value>STEREOTYPE_DISPLAY_MODE_DO_NOT_DISPLAY_STEREOTYPES</value>
+                    <choice xmi:value="STEREOTYPE_DISPLAY_MODE_TEXT_AND_ICON^STEREOTYPE_DISPLAY_MODE_TEXT^STEREOTYPE_DISPLAY_MODE_ICON^STEREOTYPE_DISPLAY_MODE_DO_NOT_DISPLAY_STEREOTYPES"/>
+                    <index xmi:value="3.0"/>
+                </mdElement>
+                <mdElement elementClass="ChoiceProperty">
+                    <propertyID>DSL_STEREOTYPE_DISPLAY_MODE</propertyID>
+                    <propertyDescriptionID>DSL_STEREOTYPE_DISPLAY_MODE_DESCRIPTION</propertyDescriptionID>
+                    <value>DSL_STEREOTYPE_DISPLAY_MODE_NONE</value>
+                    <choice xmi:value="DSL_STEREOTYPE_DISPLAY_MODE_ALL^DSL_STEREOTYPE_DISPLAY_MODE_LAST^DSL_STEREOTYPE_DISPLAY_MODE_NONE"/>
+                    <index xmi:value="2.0"/>
+                </mdElement>
+                <mdElement elementClass="BooleanProperty">
+                    <propertyID>SHOW_CONNECTOR_END_A</propertyID>
+                    <propertyDescriptionID>SHOW_CONNECTOR_END_A_DESCRIPTION</propertyDescriptionID>
+                </mdElement>
+                <mdElement elementClass="BooleanProperty">
+                    <propertyID>SHOW_CONNECTOR_END_B</propertyID>
+                    <propertyDescriptionID>SHOW_CONNECTOR_END_B_DESCRIPTION</propertyDescriptionID>
+                </mdElement>
+            </mdElement>
+        </PropertyVisitorAcceptor>
+    </elementstyle>
+</diagram>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resourceDescriptor critical="false" date="2015-08-01+03:00"
+	description="Drag&amp;Drop plugin enables user-defined partial M2M transformations between sets of related concepts, defined using different UML profiles. It contains specialized M2M Transformations diagram and partial M2M transformation engine; it will also use integration validation. Sample transformations between UML elements are included in this package; libraries which enable transformations in other profiles can be obtained or developed by the user"
+	group="" homePage="http://isd.ktu.lt/" id="72635" mdVersionMax="higher"
+	mdVersionMin="12.5" name="Drap&amp;Drop Transformations" product="Drap&amp;Drop Transformations"
+	restartMagicdraw="true" type="Plugin">
+	<version human="2.1 beta" internal="5" resource="50" />
+	<provider email="danpaulius@gmail.com" homePage="http://isd.ktu.lt/" />
+	<edition>Reader</edition>
+	<edition>Community</edition>
+	<edition>Standard</edition>
+	<edition>Professional Java</edition>
+	<edition>Professional C++</edition>
+	<edition>Professional C#</edition>
+	<edition>Professional ArcStyler</edition>
+	<edition>Professional EFFS ArcStyler</edition>
+	<edition>OptimalJ</edition>
+	<edition>Professional</edition>
+	<edition>Architect</edition>
+	<edition>Enterprise</edition>
+	<installation>
+		<file from="data/defaults/data/diagrams/M2M Transformations/descriptor.xml"
+			to="data/defaults/data/diagrams/M2M Transformations/descriptor.xml" />
+		<file from="data/defaults/data/diagrams/Business Vocabulary/descriptor.xml"
+			to="data/defaults/data/diagrams/Business Vocabulary/descriptor.xml" />	
+		<file from="data/defaults/data/diagrams/Integration/descriptor.xml"
+			to="data/defaults/data/diagrams/Integration/descriptor.xml" />
+		<file from="profiles/M2M transformations.mdxml" to="profiles/M2M transformations.mdxml" />
+		<file from="profiles/Integration profile.mdzip" to="profiles/Integration profile.mdzip" />
+		<file from="profiles/SBVR customizations.mdxml" to="profiles/SBVR customizations.mdxml" />
+		<file from="profiles/SBVR profile.mdxml" to="profiles/SBVR profile.mdxml" />
+		<file from="samples/Drag and Drop Transformations/BPMN-SOAML transformations.mdzip" 
+				to="samples/Drag and Drop Transformations/BPMN-SOAML transformations.mdzip" />
+		<file from="samples/Drag and Drop Transformations/BPMN_SBVR-SOAML transformations.mdzip" 
+				to="samples/Drag and Drop Transformations/BPMN_SBVR-SOAML transformations.mdzip" />
+		<file from="samples/Drag and Drop Transformations/UML2 Metamodel with attributes.mdzip" 
+				to="samples/Drag and Drop Transformations/UML2 Metamodel with attributes.mdzip" />	
+		<file from="plugins/org.ktu.dndtransformations/" to="plugins/org.ktu.dndtransformations/" />			
+		<file from="plugins/vepsem.customizations/" to="plugins/vepsem.customizations/" />
+	</installation>
+</resourceDescriptor>
+

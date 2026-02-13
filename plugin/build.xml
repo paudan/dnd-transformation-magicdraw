@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MD plugin creation" default="createplugin">
+    <import file="../build.xml" as="nested"/>
+    <property name="plugin.dir" value="plugin" />
+    <property name="file.name" value="dnd_plugin.zip" />
+    <property name="idapi.dir" value="D:/Darbas/KTU/IDAPI"  />
+    <property name="samples.dir" value="samples/Drag and Drop Transformations"  />
+    <property name="md.dir" value="C:/Program Files/MagicDraw"/>
+    <property name="bvdiagram.dir" value="data/defaults/data/diagrams/Business Vocabulary"  />
+    <property name="integrdiagram.dir" value="data/defaults/data/diagrams/Integration"  />
+    <target name="copyfiles" description="Copy neccessary files" >
+        <fail message="Plugin JAR file is not built">
+            <condition>
+                <and>
+                    <not>
+                        <available file="../bin/${jar.dir}/dndtransform.jar"/>
+                    </not>
+                    <not>
+                        <available file="../bin/${jar.dir}/transform-core.jar"/>
+                    </not>
+                </and>
+            </condition>
+        </fail>
+        <delete file="${file.name}" quiet="true" failonerror="false" />
+        <delete includeemptydirs="true" quiet="true" failonerror="false">
+            <fileset dir="${samples.dir}" includes="**/*"/>
+            <fileset dir="profiles" includes="**/*"/>
+            <fileset dir="plugins" includes="**/*"/>
+            <fileset dir="${bvdiagram.dir}"/>
+            <fileset dir="${integrdiagram.dir}"/>
+        </delete>
+        <mkdir dir="${samples.dir}" />
+        <mkdir dir="${samples.dir}/resources" />
+        <copy todir="plugins/${jar.dir}">
+            <fileset dir="../bin/${jar.dir}" casesensitive="yes" />
+        </copy>
+        <delete includeemptydirs="true" quiet="true" failonerror="false">
+            <fileset dir="${samples.dir}" includes="**/*"/>
+        </delete>
+        <copy file="${idapi.dir}\M2M transformations.mdxml" tofile="profiles/M2M transformations.mdxml" />
+        <copy file="${idapi.dir}\Integration profile.mdzip" tofile="profiles/Integration profile.mdzip" />
+        <copy file="${idapi.dir}\BPMN-SOAML transformations.mdzip" tofile="${samples.dir}/BPMN-SOAML transformations.mdzip" />
+        <copy file="${md.dir}\samples\UML2 Metamodel with attributes.mdzip" tofile="${samples.dir}/UML2 Metamodel with attributes.mdzip" />
+        <copy file="${idapi.dir}/BPMN_SBVR-SOAML transformations.mdzip" tofile="${samples.dir}/BPMN_SBVR-SOAML transformations.mdzip" />
+    </target>
+    <target name="zipfiles" description="Create plugin ZIP" >
+        <zip destfile="${file.name}" >
+            <zipfileset dir="data" prefix="data" />
+            <zipfileset dir="plugins" prefix="plugins"/>
+            <zipfileset dir="profiles" prefix="profiles"/>
+            <zipfileset dir="samples" prefix="samples"/>
+        </zip>
+    </target>
+    <target name="createplugin_sbvr" description="Create MagicDraw plugin ZIP (with SBVR)">
+        <antcall target="copyfiles" />
+        <mkdir dir="plugins/vepsem.customizations" />
+        <copy todir="plugins/vepsem.customizations">
+            <fileset dir="${md.dir}/plugins/vepsem.customizations" casesensitive="yes" />
+        </copy>
+        <mkdir dir="${bvdiagram.dir}" />
+        <copy todir="${bvdiagram.dir}">
+            <fileset dir="${md.dir}/${bvdiagram.dir}" casesensitive="yes" />
+        </copy>
+        <mkdir dir="${integrdiagram.dir}" />
+        <copy todir="${integrdiagram.dir}" overwrite="true" force="true">
+            <fileset dir="${md.dir}/${integrdiagram.dir}" casesensitive="yes" />
+        </copy>
+        <copy file="${md.dir}/profiles/SBVR customizations.mdxml" tofile="profiles/SBVR customizations.mdxml" />
+        <copy file="${md.dir}/profiles/SBVR profile.mdxml" tofile="profiles/SBVR profile.mdxml" />
+        <copy todir="data/resourcemanager" overwrite="true" force="true">
+            <fileset dir="files/with sbvr/resourcemanager" casesensitive="yes" />
+        </copy>
+        <antcall target="zipfiles" />
+        <zip destfile="javadoc.zip" basedir="../doc" />
+    </target>
+    <target name="createplugin" description="Create MagicDraw plugin ZIP without SBVR functionality">
+        <antcall target="copyfiles" />
+        <copy todir="data/resourcemanager" overwrite="true" force="true">
+            <fileset dir="files/without sbvr/resourcemanager" casesensitive="yes" />
+        </copy>
+        <antcall target="zipfiles" />
+        <zip destfile="javadoc.zip" basedir="../doc" />
+    </target>
+</project>

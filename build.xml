@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Drag and Drop transformations" default="default" basedir=".">
+    <description>Builds, tests, and runs the project D&amp;D transformations.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <property name="jar.dir" value="org.ktu.dndtransformations" />
+    <property name="javadoc.packages" value="org.ktu.dndtransformations.impl,org.ktu.dndtransformations.tests,org.ktu.dndtransformations.parsers,org.ktu.dndtransformations.transforms,org.ktu.dndtransformations.ui" />
+    <property name="plugin-core.dir" value="../Transformations plugin/dist" />
+    <property name="org.json.dir" value="../JSON-java/dist" />
+    <target name="-post-jar">
+        <copy file="${plugin-core.dir}/transform-core.jar" tofile="bin/${jar.dir}/transform-core.jar" />
+        <copy file="${org.json.dir}/org.json.jar" tofile="bin/${jar.dir}/org.json.jar" />
+        <copy file="plugin/files/plugin.xml" tofile="bin/${jar.dir}/plugin.xml" />
+    </target>
+    <target name="buildplugin" description="Build plugin and create JAR file">
+        <loadproperties>
+            <file file="nbproject/project.properties"/>
+        </loadproperties>
+        <antcall target="clean" />
+        <antcall target="compile" />
+        <mkdir dir="${dist.dir}/${jar.dir}"/>
+        <jar jarfile="${dist.dir}/${jar.dir}/dndtransform.jar">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Implementation-Vendor" value="Center of Information Systems Design Technologies, Kaunas University of Technology, Lithuania"/>
+                <attribute name="Implementation-Title" value="Drag and Drop transformations plugin for MagicDraw"/>
+                <attribute name="Implementation-Version" value="1.1 beta"/>
+            </manifest>
+            <fileset dir="${build.dir}/classes" casesensitive="yes">
+                <include name="org/ktu/dndtransformations/*.class"/>
+                <include name="org/ktu/dndtransformations/impl/*.class"/>
+                <include name="org/ktu/dndtransformations/impl/*.properties"/>
+                <include name="org/ktu/dndtransformations/parsers/*.class"/>
+                <include name="org/ktu/dndtransformations/parsers/*.properties"/>
+                <include name="org/ktu/dndtransformations/tests/*.class"/>
+                <include name="org/ktu/dndtransformations/tests/*.properties"/>
+                <include name="org/ktu/dndtransformations/transforms/*.class"/>
+                <include name="org/ktu/dndtransformations/transforms/*.properties"/>
+                <include name="org/ktu/dndtransformations/ui/*.class"/>
+                <include name="org/ktu/dndtransformations/ui/*.properties"/>
+            </fileset>
+        </jar>	
+        <antcall target="-post-jar" />
+    </target>
+    <target name="-javadoc-build" description="Create javadoc documentation in HTML">
+        <loadproperties>
+            <file file="nbproject/project.properties"/>
+        </loadproperties>
+        <javadoc access="protected" author="true" additionalparam="-notimestamp" 
+                 classpath="${javac.classpath}" destdir="doc" nodeprecated="false" nodeprecatedlist="false" 
+                 noindex="false" nonavbar="false" noqualifier="all" notree="false" packagenames="${javadoc.packages}" 
+                 source="1.7" splitindex="true" use="true" version="true"
+                 windowtitle="Drag &amp; Drop Transformation plugin for MagicDraw v1.0">
+            <fileset dir="src" defaultexcludes="yes">
+                <exclude name="**/Messages.java"/>
+                <exclude name="**/messages.properties"/>
+            </fileset>
+            <link href="http://docs.oracle.com/javase/7/docs/api/"/>
+            <link href="http://download.eclipse.org/modeling/emf/emf/javadoc/2.5.0/" />
+        </javadoc>
+    </target>
+    <target name="javadoc-rtf"  description="Create javadoc documentation in RTF">
+        <loadproperties>
+            <file file="nbproject/project.properties"/>
+        </loadproperties>
+        <javadoc access="protected" author="true" additionalparam="-notimestamp" 
+                 classpath="${javac.classpath}" destdir="doc-rtf" nodeprecated="false" nodeprecatedlist="false" 
+                 noindex="false" nonavbar="false" noqualifier="all" notree="false" packagenames="${javadoc.packages}" 
+                 source="1.7" splitindex="true" use="true" version="true"
+                 windowtitle="Drag &amp; Drop Transformation plugin for MagicDraw v1.1">
+            <fileset dir="src" defaultexcludes="yes">
+                <exclude name="**/Messages.java"/>
+                <exclude name="**/messages.properties"/>
+            </fileset>
+            <link href="http://docs.oracle.com/javase/7/docs/api/"/>
+            <link href="http://download.eclipse.org/modeling/emf/emf/javadoc/2.5.0/" />
+            <doclet name="com.docflex.javadoc.Doclet" path="D:\development\java\docflex-javadoc-1.6.1\lib\docflex-javadoc.jar" />
+        </javadoc>
+    </target>
+</project>

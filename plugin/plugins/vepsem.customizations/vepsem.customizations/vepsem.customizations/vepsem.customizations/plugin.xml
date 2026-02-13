@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="vepsem.customizations"
+name="VEPSEM customizations plugin"
+version="1.0"
+provider-name="Paulius Danėnas, Information Systems Department, KTU"
+class="vepsem.customizations.CustomizationsPlugin">
+<requires>
+	<api version="1.0"/>
+</requires>
+<runtime>
+	<library name="customizations.jar"/>
+</runtime>
+</plugin>
